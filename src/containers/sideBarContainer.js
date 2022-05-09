@@ -1,14 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {bindActionCreators} from 'redux';
-import { changeSelectedCrypto } from '../sara/action/watcherActions';
+import { getCryptoInformation } from '../sara/action/watcherActions';
 
 const acceptedCryptos = [
-    "ethereum",
-    "cardano",
-    "bitcoin",
-    "solana",
-    "elrond"
+    "ETH",
+    "ADA",
+    "BTC",
+    "SOL",
+    "EGLD"
 ];
 
 class CrypoResulContainer extends React.Component {
@@ -43,7 +43,7 @@ class CrypoResulContainer extends React.Component {
                             <li key={element} className="">
                                 <a 
                                     className="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" 
-                                    onClick={(e) => this.props.changeChosenCrypto(element)}
+                                    onClick={(e) => this.props.fetchCryptoInformation(element)}
                                 >{element}
                                 </a>
                             </li>
@@ -65,7 +65,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-    return {changeChosenCrypto: bindActionCreators(changeSelectedCrypto, dispatch)}
+    return {fetchCryptoInformation: bindActionCreators(getCryptoInformation, dispatch)}
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(CrypoResulContainer);

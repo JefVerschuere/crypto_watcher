@@ -9,7 +9,7 @@ const watcherReducer = (state = initialState, action) => {
         case SET_CRYPTO_INFORMATION:
             return {
                 ...state,
-                cryptoName: "bitcoin",
+                cryptoName: action.value,
             }
         case CHANGE_SELECTED_CRYPTO: 
             return {

@@ -8,7 +8,6 @@ class CryptoResult extends React.Component {
             <div>
                 {this.props.item.cryptoName}
                 <br />
-                <button onClick={this.props.fetchCryptoInformation}>b</button>
             </div>
         )
     }
