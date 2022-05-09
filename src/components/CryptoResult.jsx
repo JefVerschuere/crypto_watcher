@@ -7,13 +7,6 @@ class CryptoResult extends React.Component {
     render() {
         let information = this.props.cryptoInformation;
         console.log(information);
-        if(information === undefined) {
-            return (
-                <div>
-
-                </div>
-            )
-        }
         return(
         <div className="rounded-lg bg-white shadow-lg p-16">
         <div className="flex justify-center">
