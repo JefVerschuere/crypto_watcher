@@ -1,5 +1,6 @@
 const axios = require('axios');
 import { useDispatch } from "react-redux";
+import CryptoResultContainer from "../containers/CryptoResultContainer";
 import { GET_CRYPTO_INFOMRATION } from '../sara/action/watcherActions';
 
 export default function Home() {
@@ -10,9 +11,7 @@ export default function Home() {
     */
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2 italic">
-      <button onClick={() => dispatch({type: "GET_CRYPTO_INFOMRATION"})}>
-        Click me :D
-      </button>
+      <CryptoResultContainer />
       test
       </div>
   )
