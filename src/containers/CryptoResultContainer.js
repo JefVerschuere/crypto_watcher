@@ -7,7 +7,7 @@ import CryptoResult from '../components/CryptoResult';
 
 class CrypoResulContainer extends React.Component {
     componentDidMount() {
-        this.props.fetchCryptoInformation();
+        console.log("boebke");
     }
 
     render() {

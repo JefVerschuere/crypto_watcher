@@ -1,8 +1,9 @@
 import { call, put, takeEvery, takeLatest } from 'redux-saga/effects';
-import { GET_CRYPTO_INFOMRATION } from '../action/watcherActions'
+import { GET_CRYPTO_INFOMRATION, setCryptoInformation } from '../action/watcherActions'
 
 function* fetchCryptoInformation(action) {
     console.log(GET_CRYPTO_INFOMRATION);
+    yield put(setCryptoInformation('test'));
 }
 
 
