@@ -2,6 +2,7 @@ import { CHANGE_SELECTED_CRYPTO, SET_CRYPTO_INFORMATION } from "../action/watche
 
 const initialState = {
     cryptoName: "eth",
+    cryptoInformation: {},
 };
 
 const watcherReducer = (state = initialState, action) => {
@@ -9,7 +10,7 @@ const watcherReducer = (state = initialState, action) => {
         case SET_CRYPTO_INFORMATION:
             return {
                 ...state,
-                cryptoName: action.value,
+                cryptoInformation: action.value,
             }
         case CHANGE_SELECTED_CRYPTO: 
             return {

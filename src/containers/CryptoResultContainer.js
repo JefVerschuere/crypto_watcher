@@ -7,13 +7,12 @@ import CryptoResult from '../components/CryptoResult';
 
 class CrypoResulContainer extends React.Component {
     componentDidMount() {
-        console.log("boebke");
     }
 
     render() {
         return (
             <CryptoResult
-                item={this.props.item}
+            cryptoInformation={this.props.cryptoInformation}
                 fetchCryptoInformation={this.props.fetchCryptoInformation}
             />
         )
@@ -23,7 +22,7 @@ class CrypoResulContainer extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        item: state.watcherReducer,
+        cryptoInformation: state.watcherReducer.cryptoInformation,
     }
 }
 
