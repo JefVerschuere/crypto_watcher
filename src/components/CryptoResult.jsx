@@ -7,6 +7,7 @@ class CryptoResult extends React.Component {
         return(
             <div>
                 {this.props.item}
+                <button onClick={this.props.fetchCryptoInformation}>b</button>
             </div>
         )
     }
@@ -14,6 +15,7 @@ class CryptoResult extends React.Component {
 
 CryptoResult.propTypes = {
     item: propTypes.string.isRequired,
+    fetchCryptoInformation: propTypes.func.isRequired,
 }
 
 export default CryptoResult;
