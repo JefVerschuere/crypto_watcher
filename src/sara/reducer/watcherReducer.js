@@ -1,4 +1,4 @@
-import { CHANGE_SELECTED_CRYPTO, SET_CRYPTO_INFORMATION, SET_TWITTER_INFORMATION } from "../action/watcherActions";
+import { SET_CRYPTO_INFORMATION, SET_TWITTER_INFORMATION } from "../action/watcherActions";
 
 const initialState = {
     cryptoName: "eth",
@@ -15,11 +15,6 @@ const watcherReducer = (state = initialState, action) => {
                 ...state,
                 cryptoInformation: action.value,
                 isFetched: true,
-            }
-        case CHANGE_SELECTED_CRYPTO: 
-            return {
-                ...state,
-                cryptoName: action.value,
             }
         case SET_TWITTER_INFORMATION:
             return {
