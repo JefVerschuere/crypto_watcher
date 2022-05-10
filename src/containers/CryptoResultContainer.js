@@ -6,14 +6,10 @@ import CryptoResult from '../components/CryptoResult';
 
 
 class CrypoResulContainer extends React.Component {
-    componentDidMount() {
-    }
-
     render() {
         return (
             <CryptoResult
-            cryptoInformation={this.props.cryptoInformation}
-                fetchCryptoInformation={this.props.fetchCryptoInformation}
+                cryptoInformation={this.props.cryptoInformation}
             />
         )
     }

@@ -7,9 +7,8 @@ export default function Home() {
   return (
     <div>
       <SideBarContainer />
-      <div className="flex flex-col items-center justify-center min-h-screen py-2 italic">
-
-      <CryptoResultContainer />
+      <div className="flex flex-col items-center justify-center min-h-screen py-2 italic bg-zinc-100">
+        <CryptoResultContainer />
       </div>
     </div>
 
