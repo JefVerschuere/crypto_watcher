@@ -3,7 +3,9 @@ import { CHANGE_SELECTED_CRYPTO, SET_CRYPTO_INFORMATION, SET_TWITTER_INFORMATION
 const initialState = {
     cryptoName: "eth",
     cryptoInformation: {},
+    twitterInformation: {},
     isFetched: false,
+    isTwitterFetched: false,
 };
 
 const watcherReducer = (state = initialState, action) => {
@@ -22,7 +24,8 @@ const watcherReducer = (state = initialState, action) => {
         case SET_TWITTER_INFORMATION:
             return {
                 ...state,
-                twitterInformation: action.value
+                twitterInformation: action.value,
+                isTwitterFetched: true
             }
         default: 
             return state;

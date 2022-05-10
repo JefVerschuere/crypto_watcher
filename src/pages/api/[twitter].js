@@ -18,6 +18,8 @@ export default async function handler(req, res) {
         var element = {};
         element.name = faker.name.findName();
         element.tweet = faker.company.catchPhrase();
+        element.likes = faker.random.numeric(5);
+        element.retweets = faker.random.numeric(4);
         result.push(element)
       }
 
