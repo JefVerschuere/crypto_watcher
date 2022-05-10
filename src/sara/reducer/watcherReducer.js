@@ -3,6 +3,7 @@ import { CHANGE_SELECTED_CRYPTO, SET_CRYPTO_INFORMATION, SET_TWITTER_INFORMATION
 const initialState = {
     cryptoName: "eth",
     cryptoInformation: {},
+    isFetched: false,
 };
 
 const watcherReducer = (state = initialState, action) => {
@@ -11,6 +12,7 @@ const watcherReducer = (state = initialState, action) => {
             return {
                 ...state,
                 cryptoInformation: action.value,
+                isFetched: true,
             }
         case CHANGE_SELECTED_CRYPTO: 
             return {

@@ -13,13 +13,15 @@ class CrypoResulContainer extends React.Component {
             <h4 className="mt-6 text-3xl font-normal leading-normal mb-2 text-gray-800">
                 CryptoWatcher
             </h4>
-            <CryptoResult
-                cryptoInformation={this.props.item.cryptoInformation}
-            />
+            {this.props.isFetched &&
+                <CryptoResult
+                    cryptoInformation={this.props.cryptoInformation}
+                />
+            }
             <div className="p-2 pt-6">
                 <div className="group inline-block relative">
                     <button className="bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center" >
-                        <span className="mr-1">{this.props.item.cryptoInformation.name || 'Select'}</span>
+                        <span className="mr-1">{this.props.cryptoInformation.name || 'Select'}</span>
                         <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                             <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
                         </svg>
@@ -47,7 +49,9 @@ class CrypoResulContainer extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        item: state.watcherReducer,
+        cryptoInformation: state.watcherReducer.cryptoInformation,
+        isFetched: state.watcherReducer.isFetched,
+        
     }
 }
 
