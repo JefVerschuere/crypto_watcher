@@ -18,9 +18,7 @@ class CryptoResult extends React.Component {
                         Price now
                     </p>
                     <div className="py-8 border-b border-indigo-50 mr-2 ml-2">
-                        <div>
-                            {numeral(information.price).format('0.00')} €
-                        </div>
+                        {numeral(information.price).format('0.00')} €
                     </div>
                 </div>
             </div>
