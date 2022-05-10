@@ -20,7 +20,7 @@ class CrypoResulContainer extends React.Component {
             }
             <div className="p-2 pt-6">
                 <div className="group inline-block relative">
-                    <button className="bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center" >
+                    <button className="bg-gray-300 text-gray-700 font-semibold py-2 px-8 rounded inline-flex items-center" >
                         <span className="mr-1">{this.props.cryptoInformation.name || 'Select'}</span>
                         <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                             <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
@@ -31,7 +31,7 @@ class CrypoResulContainer extends React.Component {
                             return (
                                 <li key={element} className="">
                                     <a 
-                                        className="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" 
+                                        className="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-8 block whitespace-no-wrap" 
                                         onClick={(e) => this.props.fetchCryptoInformation(element)}
                                     >{element}
                                     </a>
